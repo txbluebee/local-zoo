@@ -9,6 +9,7 @@ import { AnimalDetailComponent } from './animal-detail/animal-detail.component';
 import { NewAnimalComponent } from './new-animal/new-animal.component';
 import { EditAnimalComponent } from './edit-animal/edit-animal.component';
 import { AgeGroupPipe } from './age-group.pipe';
+import { DietPipe } from './diet.pipe';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AgeGroupPipe } from './age-group.pipe';
     AnimalDetailComponent,
     NewAnimalComponent,
     EditAnimalComponent,
-    AgeGroupPipe
+    AgeGroupPipe,
+    DietPipe
   ],
   imports: [
     BrowserModule,

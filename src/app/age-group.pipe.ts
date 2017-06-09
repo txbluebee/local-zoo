@@ -9,14 +9,14 @@ import { Animal } from './animal.model';
 
 export class AgeGroupPipe implements PipeTransform {
   transform(input: Animal[], filterByAgeGroup){
-    const output: Animal[] = [];
+    var output: Animal[] = [];
     if (filterByAgeGroup === "allAnimals") {
-      for (let i = 0; i < input.length; i++) {
+      for (var i = 0; i < input.length; i++) {
         output.push(input[i]);
       }
       return output;
     } else if (filterByAgeGroup === "old") {
-      for (let i = 0; i < input.length; i++) {
+      for (var i = 0; i < input.length; i++) {
         if (input[i].age > 2) {
           output.push(input[i]);
         }

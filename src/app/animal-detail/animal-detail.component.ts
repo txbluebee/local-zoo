@@ -14,10 +14,17 @@ export class AnimalDetailComponent {
     this.editAnimalSender.emit(animal);
   }
 
-  // Select Different Age Group
+  // filter animal by Age
   filterByAgeGroup: string = "allAnimals";
-  
+
   onChangeAge(ageOption) {
     this.filterByAgeGroup = ageOption;
+  }
+
+  // filter animal by Different
+  filterByDiet: string = "allAnimals"
+
+  onChangeDiet(dietOption) {
+    this.filterByDiet = dietOption;
   }
 }

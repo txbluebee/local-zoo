@@ -4,20 +4,31 @@
   </div>
 </div>
 <div class="row">
-  <div class="col-sm-3 offset-sm-9">
+  <div class="col"></div>
+  <div class="col">
     <div class="form-group">
-      <label>Sort by Age Group:</label>
       <select (change)="onChangeAge($event.target.value)" class="form-control">
-        <option value="allAnimals" selected="selected">All Animals</option>
+        <option value="" disabled selected>Sort By Age Group</option>
+        <option value="allAnimals">All</option>
         <option value="old">Old Animals</option>
         <option value="young">Young Animals</option>
+      </select>
+    </div>
+  </div>
+  <div class="col">
+    <div class="form-group">
+      <select (change)="onChangeDiet($event.target.value)" class="form-control">
+        <option value="" disabled selected>Sort By Diet</option>
+        <option value="allAnimals">All</option>
+        <option value="carnivore">Carnivore</option>
+        <option value="herbivore">Herbivore</option>
       </select>
     </div>
   </div>
 </div>
 
 <div class="row display-animal">
-  <div *ngFor="let animal of animalList | ageGroup:filterByAgeGroup" class="col-sm-4 each-card">
+  <div *ngFor="let animal of animalList | ageGroup:filterByAgeGroup | diet:filterByDiet" class="col-sm-4 each-card">
     <div class="card">
       <div class="card-block bg-inverse text-white">
         <h4 class="card-title text-center">{{animal.name}}
