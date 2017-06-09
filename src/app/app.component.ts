@@ -49,4 +49,8 @@ export class AppComponent {
   addAnimal(newAnimal){
     this.animalList.push(newAnimal);
   }
+
+  finishedEditing() {
+    this.selectedAnimal = null;
+  }
 }

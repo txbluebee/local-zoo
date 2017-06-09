@@ -11,7 +11,7 @@
       </app-animal-detail>
     </div>
     <div class="con-sm-5">
-      <app-edit-animal  [selectedAnimal]="selectedAnimal"></app-edit-animal>
+      <app-edit-animal  [selectedAnimal]="selectedAnimal" (finishedEditingSender)="finishedEditing()"></app-edit-animal>
     </div>
   </div>
 </div>
