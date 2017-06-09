@@ -43,7 +43,11 @@ export class AppComponent {
   selectedAnimal = null;
 
   editAnimal(animal){
-    this.selectedAnimal = animal;
+    if (this.selectedAnimal === animal) {
+      this.selectedAnimal = null;
+    } else {
+      this.selectedAnimal = animal;
+    }
   }
 
   addAnimal(newAnimal){
