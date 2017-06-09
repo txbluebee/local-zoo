@@ -1,9 +1,12 @@
-<h2>Our Stars</h2>
-
+<div class="row display-caption">
+  <div class="col-sm-8 offset-sm-2">
+    <p>Animal Database</p>
+  </div>
+</div>
 <div class="row">
-  <div class="col-sm-5">
+  <div class="col-sm-3 offset-sm-9">
     <div class="form-group">
-      <label>Sort by Animal Age:</label>
+      <label>Sort by Age Group:</label>
       <select (change)="onChangeAge($event.target.value)" class="form-control">
         <option value="allAnimals" selected="selected">All Animals</option>
         <option value="old">Old Animals</option>
@@ -13,15 +16,25 @@
   </div>
 </div>
 
-<div *ngFor="let animal of animalList | ageGroup:filterByAgeGroup" class="mb-5">
-  <h5 class="text-primary">Name: {{animal.name}}</h5>
-  <p>Species: {{animal.species}}</p>
-  <p>Age: {{animal.age}}</p>
-  <p>Diet: {{animal.diet}}</p>
-  <p>Location: {{animal.location}}</p>
-  <p>Caretakers: {{animal.caretakers}}</p>
-  <p>Sex: {{animal.sex}}</p>
-  <p>Likes: {{animal.likes}}</p>
-  <p>Dislikes: {{animal.dislikes}}</p>
-  <button class="btn btn-primary" (click)="editAnimal(animal)">Edit</button>
+<div class="row display-animal">
+  <div *ngFor="let animal of animalList | ageGroup:filterByAgeGroup" class="col-sm-4 each-card">
+    <div class="card">
+      <div class="card-block bg-inverse text-white">
+        <h4 class="card-title text-center">{{animal.name}}
+          <a role="button" (click)="editAnimal(animal)" >
+            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+          </a>
+        </h4>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><span>Species: </span> {{animal.species}}</li>
+        <li class="list-group-item"><span>Age:</span> {{animal.age}}</li>
+        <li class="list-group-item"><span>Diet:</span> {{animal.diet}}</li>
+        <li class="list-group-item"><span>Location:</span> {{animal.location}}</li>
+        <li class="list-group-item"><span>Sex:</span> {{animal.sex}}</li>
+        <li class="list-group-item"><span>Likes:</span> {{animal.likes}}</li>
+        <li class="list-group-item"><span>Dislikes:</span> {{animal.dislikes}}</li>
+      </ul>
+    </div>
+  </div>
 </div>

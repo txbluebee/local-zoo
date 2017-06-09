@@ -1,0 +1,35 @@
+// *{
+//   border: 1px solid;
+//
+// }
+
+.display-caption {
+  margin-top: 2rem;
+  p {
+    text-align: center;
+    font-size: 2rem;
+    border-bottom: 1px;
+    border-bottom-style: double;
+  }
+}
+
+.display-animal{
+  .each-card{
+    margin-bottom: 2rem;
+    .card-block{
+      a {
+        font-size: 1.2rem;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+    .list-group-item{
+      span{
+        font-weight: bold;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+}

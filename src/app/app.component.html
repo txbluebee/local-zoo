@@ -1,17 +1,24 @@
-<div class="container">
-  <div class="jumbotron">
-    <h1>Local Zoo</h1>
+<div id="cover">
+  <div id="cover-caption">
+    <h1>Animal Tracker</h1>
   </div>
 </div>
 <div class="container">
-  <app-new-animal (newAnimalSender)="addAnimal($event)"></app-new-animal>
-  <div class="row">
-    <div class="col-sm-7">
-      <app-animal-detail [animalList]="animalList" (editAnimalSender)="editAnimal($event)">
-      </app-animal-detail>
-    </div>
-    <div class="con-sm-5">
-      <app-edit-animal  [selectedAnimal]="selectedAnimal" (finishedEditingSender)="finishedEditing()"></app-edit-animal>
-    </div>
-  </div>
+
+  <!-- Add New Animal -->
+  <app-new-animal
+  (newAnimalSender)="addAnimal($event)">
+  </app-new-animal>
+
+  <!-- Display Animal Detail -->
+  <app-animal-detail
+    [animalList]="animalList"
+    (editAnimalSender)="editAnimal($event)">
+  </app-animal-detail>
+
+  <!-- Edit Animal Info-->
+  <app-edit-animal
+  [selectedAnimal]="selectedAnimal" (finishedEditingSender)="finishedEditing()">
+  </app-edit-animal>
+
 </div>
