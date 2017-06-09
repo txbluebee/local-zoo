@@ -1,0 +1,41 @@
+<div *ngIf="selectedAnimal">
+
+  <h4>Update Animal Info: </h4>
+  <div class="form-group">
+    <label>Name: </label>
+    <input [(ngModel)]="selectedAnimal.name" class="form-control">
+  </div>
+  <div class="form-group">
+    <label>Species: </label>
+    <input [(ngModel)]="selectedAnimal.species" class="form-control">
+  </div>
+  <div class="form-group">
+    <label>Age: </label>
+    <input [(ngModel)]="selectedAnimal.age" class="form-control">
+  </div>
+  <div class="form-group">
+    <label>Diet: </label>
+    <input [(ngModel)]="selectedAnimal.diet" class="form-control">
+  </div>
+  <div class="form-group">
+    <label>Location: </label>
+    <input [(ngModel)]="selectedAnimal.location" class="form-control">
+  </div>
+  <div class="form-group">
+    <label>Caretakers: </label>
+    <input [(ngModel)]="selectedAnimal.caretakers" class="form-control">
+  </div>
+  <div class="form-group">
+    <label>Sex: </label>
+    <input [(ngModel)]="selectedAnimal.sex" class="form-control">
+  </div>
+  <div class="form-group">
+    <label>Likes: </label>
+    <input [(ngModel)]="selectedAnimal.likes" class="form-control">
+  </div>
+  <div class="form-group">
+    <label>Dislikes: </label>
+    <input [(ngModel)]="selectedAnimal.dislikes" class="form-control">
+  </div>
+  <button class="btn btn-danger" (click)="finishedEditing()">Update</button>
+</div>

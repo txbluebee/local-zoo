@@ -40,6 +40,12 @@ export class AppComponent {
     }
   ];
 
+  selectedAnimal = null;
+
+  editAnimal(animal){
+    this.selectedAnimal = animal;
+  }
+
   addAnimal(newAnimal){
     this.animalList.push(newAnimal);
   }

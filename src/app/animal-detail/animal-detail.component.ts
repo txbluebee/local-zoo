@@ -1,4 +1,4 @@
-import { Component, Input} from '@angular/core';
+import { Component, Input, Output, EventEmitter} from '@angular/core';
 import { Animal } from '../animal.model';
 
 @Component({
@@ -8,5 +8,9 @@ import { Animal } from '../animal.model';
 })
 export class AnimalDetailComponent {
   @Input() animalList: Animal[];
-  
+  @Output() editAnimalSender = new EventEmitter;
+
+  editAnimal(animal){
+    this.editAnimalSender.emit(animal);
+  }
 }

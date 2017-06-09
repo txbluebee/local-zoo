@@ -5,5 +5,13 @@
 </div>
 <div class="container">
   <app-new-animal (newAnimalSender)="addAnimal($event)"></app-new-animal>
-  <app-animal-detail [animalList]="animalList"></app-animal-detail>
+  <div class="row">
+    <div class="col-sm-7">
+      <app-animal-detail [animalList]="animalList" (editAnimalSender)="editAnimal($event)">
+      </app-animal-detail>
+    </div>
+    <div class="con-sm-5">
+      <app-edit-animal  [selectedAnimal]="selectedAnimal"></app-edit-animal>
+    </div>
+  </div>
 </div>
