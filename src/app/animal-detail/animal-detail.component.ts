@@ -13,4 +13,11 @@ export class AnimalDetailComponent {
   editAnimal(animal){
     this.editAnimalSender.emit(animal);
   }
+
+  // Select Different Age Group
+  filterByAgeGroup: string = "allAnimals";
+  
+  onChangeAge(ageOption) {
+    this.filterByAgeGroup = ageOption;
+  }
 }

@@ -8,13 +8,15 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AnimalDetailComponent } from './animal-detail/animal-detail.component';
 import { NewAnimalComponent } from './new-animal/new-animal.component';
 import { EditAnimalComponent } from './edit-animal/edit-animal.component';
+import { AgeGroupPipe } from './age-group.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     AnimalDetailComponent,
     NewAnimalComponent,
-    EditAnimalComponent
+    EditAnimalComponent,
+    AgeGroupPipe
   ],
   imports: [
     BrowserModule,

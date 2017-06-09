@@ -1,5 +1,19 @@
 <h2>Our Stars</h2>
-<div *ngFor="let animal of animalList" class="mb-5">
+
+<div class="row">
+  <div class="col-sm-5">
+    <div class="form-group">
+      <label>Sort by Animal Age:</label>
+      <select (change)="onChangeAge($event.target.value)" class="form-control">
+        <option value="allAnimals" selected="selected">All Animals</option>
+        <option value="old">Old Animals</option>
+        <option value="young">Young Animals</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<div *ngFor="let animal of animalList | ageGroup:filterByAgeGroup" class="mb-5">
   <h5 class="text-primary">Name: {{animal.name}}</h5>
   <p>Species: {{animal.species}}</p>
   <p>Age: {{animal.age}}</p>
