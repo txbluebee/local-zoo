@@ -1,0 +1,100 @@
+<!-- Button trigger modal -->
+<button class="btn btn-outline-primary" data-toggle="modal" data-target="#newAnimalModal">Add New Animal</button>
+
+<!-- Modal -->
+<div class="modal fade" id="newAnimalModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">New Animal</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <!-- Model Body -->
+      <div class="modal-body keg-model-body">
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label">Name:</label>
+          <div class="col-sm-5">
+            <input #newName>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label">Species:</label>
+          <div class="col-sm-5">
+            <input #newSpecies>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label">Age:</label>
+          <div class="col-sm-5">
+            <input #newAge>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label">Diet:</label>
+          <div class="col-sm-5">
+            <input #newDiet>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label">Location: </label>
+          <div class="col-sm-5">
+            <input #newLocation>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label">Caretakers:</label>
+          <div class="col-sm-5">
+            <input #newCaretakers>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label">Sex:</label>
+          <div class="col-sm-5">
+            <input #newSex>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label">Likes:</label>
+          <div class="col-sm-5">
+            <input #newLikes>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label">Dislikes:</label>
+          <div class="col-sm-5">
+            <input #newDislikes>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+        <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="
+        submitNewAnimal (
+          newName.value,
+          newSpecies.value,
+          newAge.value,
+          newDiet.value,
+          newLocation.value,
+          newCaretakers.value,
+          newSex.value,
+          newLikes.value,
+          newDislikes.value
+        );
+
+          newName.value='';
+          newSpecies.value='';
+          newAge.value='';
+          newDiet.value='';
+          newLocation.value='';
+          newCaretakers.value='';
+          newSex.value='';
+          newLikes.value='';
+          newDislikes.value='';"
+          >Add</button>
+      </div>
+    </div>
+  </div>
+</div>

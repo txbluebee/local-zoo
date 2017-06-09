@@ -4,5 +4,6 @@
   </div>
 </div>
 <div class="container">
+  <app-new-animal (newAnimalSender)="addAnimal($event)"></app-new-animal>
   <app-animal-detail [animalList]="animalList"></app-animal-detail>
 </div>
