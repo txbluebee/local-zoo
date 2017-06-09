@@ -21,11 +21,11 @@ Local Zoo is a web application to track animals for zoo. Zoo staff can add and u
   * Spec 4: Edit existing animal data.
   * Spec 5: Filter animal data by age group.
 
-3. Potential Future Functionalities
+3. Potential future functionalities
   * Save animal data to database
   * See animal detail at single page
   * Let user to delete animal data
-  * Display Animal by youngest to oldest
+  * Display animal by youngest to oldest
   * Import animal data through API.
 
 4. UX/UI
@@ -40,7 +40,7 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone <https://github.com/txbluebee/local-zoo>`
+* `git clone https://github.com/txbluebee/local-zoo`
 * `cd local-zoo`
 * `npm install`
 
@@ -48,14 +48,6 @@ You will need the following things properly installed on your computer.
 
 * `ng serve`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
 ## Technologies Used
 
